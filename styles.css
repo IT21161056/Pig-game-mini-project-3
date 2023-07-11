@@ -250,3 +250,19 @@ main {
     top: 44.5%;
   }
 }
+
+@media only screen and (max-width: 1200px) {
+  .btn--new {
+    top: 12%;
+  }
+
+  .btn--hold {
+    top: 64%;
+  }
+  .btn--roll {
+   top: 73%;
+  }
+  .dice {
+    top: 40.5%;
+  }
+}
