@@ -72,3 +72,23 @@ btnHold.addEventListener('click', function () {
         }
     }
 });
+//final
+//reset game functionality
+btnNew.addEventListener('click', function () {
+    
+    activePlayer = 0;
+    player0El.classList.add('player--active');
+    player1El.classList.remove('player--active');
+    player0El.classList.remove('player--winner');
+    player1El.classList.remove('player--winner');
+    diceEl.classList.add('hidden');
+
+    scores[0] = 0;
+    scores[1] = 0;
+    playing = true;
+    
+    currentScore0.textContent=0;
+    currentScore1.textContent=0;
+    score0El.textContent = 0;
+    score1El.textContent = 0;
+});
