@@ -20,6 +20,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
 }
 
 /* LAYOUT */
@@ -34,6 +35,7 @@ main {
   border-radius: 9px;
   overflow: hidden;
   display: flex;
+  flex-direction: row;
 }
 
 .player {
@@ -130,13 +132,13 @@ main {
 }
 
 .btn--new {
-  top: 4rem;
+  top: 20rem;
 }
 .btn--roll {
-  top: 39.3rem;
+  top: 62.3rem;
 }
 .btn--hold {
-  top: 46.1rem;
+  top: 56.1rem;
 }
 
 .btn:active {
@@ -151,7 +153,7 @@ main {
 .dice {
   position: absolute;
   left: 50%;
-  top: 16.5rem;
+  top: 20.5rem;
   transform: translateX(-50%);
   height: 10rem;
   box-shadow: 0 2rem 5rem rgba(0, 0, 0, 0.2);
@@ -168,4 +170,83 @@ main {
 
 .hidden {
     display: none;
+}
+
+@media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+  main {
+    position: relative;
+    height: 60%;
+    flex-direction: column;
+    margin: 10px;
+  }
+
+  .player {
+    padding: 1rem;
+  }
+  .name {
+    position: relative;
+    font-size: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    word-spacing: 2px;
+    font-weight: 300;
+    margin-bottom: 1rem;
+    
+  }
+
+  .player--1 .name {
+    margin-top: auto;
+  }
+  /* .player--0 .name{
+    margin-top: auto;
+  } */
+  .player--0 .current {
+    margin-bottom: auto;
+  }
+
+  .btn--new {
+    top: 5%;
+  }
+
+  .btn--hold {
+    top: 82%;
+  }
+  .btn--roll {
+   top: 90%;
+  }
+
+  .current {
+    background-color: #c7365f;
+    opacity: 0.8;
+    border-radius: 9px;
+    color: #fff;
+    width: 40%;
+    padding: 1rem;
+    text-align: center;
+    transition: all 0.75s;
+  }
+  
+  .current-label {
+    text-transform: uppercase;
+    margin-bottom: 0.5rem;
+    font-size: 1.7rem;
+    color: #ddd;
+  }
+  
+  .current-score {
+    font-size: 2.5rem;
+  }
+
+  .score {
+    font-size: 5rem;
+    font-weight: 300;
+    color: #c7365f;
+    margin-bottom: 20px;
+  }
+
+  .dice {
+    height: 6rem;
+    top: 44.5%;
+  }
 }
