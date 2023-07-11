@@ -72,7 +72,7 @@ btnHold.addEventListener('click', function () {
         }
     }
 });
-
+//final
 //reset game functionality
 btnNew.addEventListener('click', function () {
     
